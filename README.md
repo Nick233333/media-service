@@ -7,10 +7,12 @@
 - kafka
 - ffmpeg
 
-## 构建命令
+## 运行项目命令
 
-```
+```go
+go run consumer.go -f etc/consumer.yaml
 
+go run media.go -f etc/media-api.yaml
 ```
 
 goctl 命令
