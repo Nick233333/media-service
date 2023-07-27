@@ -1,0 +1,32 @@
+Name: api-api
+Host: 0.0.0.0
+Port: 8888
+
+MediaTypes:
+  - .mp4
+  - .MP4
+  - .webm
+  - .WEBM
+  - .MOV
+  - .mov
+  - .m4v
+  - .M4V
+Domains:
+  - https://baidu.com
+
+Standards:
+ - 480p
+ - 720p
+ - 1080p
+ - original
+
+Log:
+  ServiceName: media-api
+  Level: info
+  Encoding: json 
+  TimeFormat: "2006-01-02 15:04:05"
+
+Kafka:
+  Addrs:
+    - 127.0.0.1:9092
+  MediaTopic: media-topic

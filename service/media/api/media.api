@@ -1,0 +1,28 @@
+info(
+	title: "媒体服务"
+	desc: "处理视频相关的服务"
+	author: "Nick"
+)
+
+type (
+	TransformReq {
+		MediaUrl  string `json:"media_url"`
+		Standard  string `json:"standard"`
+		NotifyUrl string `json:"notify_url"`
+	}
+
+	TransformReply {
+		Code int         `json:"code"`
+		Msg  string      `json:"msg"`
+		Data interface{} `json:"data,omitempty"`
+	}
+)
+
+@server(
+	prefix: v1
+)
+
+service media-api {
+	@handler ApiHandler
+	post /medium/transform(TransformReq) returns (TransformReply)
+}

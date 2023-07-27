@@ -1,0 +1,16 @@
+Name: consumer
+Host: 0.0.0.0
+Port: 8888
+
+Log:
+  ServiceName: consumer-log
+  Level: info
+  Encoding: json 
+  TimeFormat: "2006-01-02 15:04:05"
+
+Kafka:
+  Name: media_msg,
+  Brokers:
+    - 127.0.0.1:9092
+  Topic: media-topic
+  Group: media-group
